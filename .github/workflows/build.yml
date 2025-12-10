@@ -34,23 +34,23 @@ jobs:
       - name: Rename
         run: |
           mkdir release
-          
+
           mkdir -p release/x86_64
           cp -r output/x86_64/proot/bin/* release/x86_64/
-          tar -czf release/x86_64-proot.tar.gz -C release/x86_64 .
+          tar -czf release/x86_64.tar.gz -C release/x86_64 .
 
           mkdir -p release/armv7a
           cp -r output/armv7a/proot/bin/* release/armv7a/
-          tar -czf release/armv7a-proot.tar.gz -C release/armv7a .
+          tar -czf release/armv7a.tar.gz -C release/armv7a .
 
           mkdir -p release/aarch64
           cp -r output/aarch64/proot/bin/* release/aarch64/
-          tar -czf release/aarch64-proot.tar.gz -C release/aarch64 .
+          tar -czf release/aarch64.tar.gz -C release/aarch64 .
 
       - name: Release
         uses: ncipollo/release-action@v1
         with:
           artifacts: |
-            release/x86_64/*
-            release/armv7a/*
-            release/aarch64/*
+            release/x86_64.tar.gz
+            release/armv7a.tar.gz 
+            release/aarch64.tar.gz
