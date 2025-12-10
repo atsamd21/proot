@@ -52,5 +52,5 @@ jobs:
         with:
           artifacts: |
             release/x86_64.tar.gz
-            release/armv7a.tar.gz 
+            release/armv7a.tar.gz
             release/aarch64.tar.gz
