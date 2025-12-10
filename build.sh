@@ -168,3 +168,5 @@ cat << EOF > "../output/${ARCH}/proot/bin/libprootwrapper.so"
 EOF
 
 done
+
+cd ../
