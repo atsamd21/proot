@@ -21,16 +21,7 @@ jobs:
         run: |
           chmod +x ./build.sh
           sudo ./build.sh
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: output
-          path: |
-            output/x86_64/proot
-            output/aarch64/proot
-            output/armv7a/proot
-
+          
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
