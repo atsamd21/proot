@@ -19,7 +19,7 @@ jobs:
 
       - name: Run build.sh
         run: |
-          chmod +x ./setup.sh
+          chmod +x ./build.sh
           sudo ./build.sh
 
       - name: Upload artifact
