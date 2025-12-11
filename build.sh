@@ -162,7 +162,7 @@ cat << EOF > "../output/${ARCH}/proot/bin/libprootwrapper.so"
     unset LD_PRELOAD
     export LD_LIBRARY_PATH="\$dir"
     export PROOT_LOADER="\$dir/libloader.so"
-    $(if [ "$ARCH" != 'armv7a' ]; then echo "export PROOT_LOADER_32="\$dir/libloader32.so""; fi)
+    $(if [ "$ARCH" != 'armv7a' ]; then echo "export PROOT_LOADER_32=\"\$dir/libloader32.so\""; fi)
 
     exec "\$dir/libproot.so" "\$@"
 EOF
